@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">MojAlarmik</string>
+    <string name="app_name">Mój Alarmik</string>
+    <string name="turn_off">Wyłącz</string>
+    <string name="send_sms">Wyslij SMS</string>
+    <string name="info_title">Info</string>
+    <string name="info">Budzik przeznaczony jest dla wyjątkowych spiochów.\n Wyłączany jest za pomocą barcodu, który wcześniej zapisaliśmy. Służy do tego ikonka w menu (polecam ustawić opakowanie kawy).\n
+        Jeżeli zaznaczymy opcję \"Wyślij sms\" po 100 sekundach od włączenia alarmu zostanie wysłany sms do naszej zaufanej osoby, aby mogła nam pomoć wstać w ważnych chwilach (np. przed egzaminem). Za pomocą ikonki nuty możemy zmienić dzwonek.</string>
+    <string name="wrong_barcode">Seskanowano zły kod</string>
+    <string name="not_choosen_barcode">Nie wprowadzono barcodu!</string>
+    <string name="choose_contact">Musisz wybrać swój zaufany kontakt</string>
+    <string name="sms_info">Nie udało mi się wstać. Pomóż!</string>
+    <string name="disabled_sms">Nie możesz korzystać z opcji wysłania sms-a.</string>
+    <string name="barcode_saved">Barcode został zapisany.</string>
+    <string name="contact_saved">Wybrano kontakt do wysłania SMS-a.</string>
+    <string name="music_saved">Wybrano dzwonek.</string>
 </resources>

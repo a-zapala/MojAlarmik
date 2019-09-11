@@ -1,30 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlarmActivity">
+    android:gravity="center_horizontal"
+    android:weightSum="2"
+    tools:context=".AlarmActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <TimePicker
         android:id="@+id/alarmTimePicker"
+        style="@style/myTimePickerStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="262dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <ToggleButton
+            android:id="@+id/alarmToggle"
+            android:layout_width="wrap_content"
+            android:onClick="onToggleClicked"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_btn_toogle"
+            />
+
+        <CheckBox
+            android:id="@+id/checkSMS"
+            android:text="@string/send_sms"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:onClick="onCheckSMSClicked"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:layout_margin="30dp" />
+
+    </LinearLayout>
 
 
-    <ToggleButton
-        android:id="@+id/alarmToggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Alarm On/Off"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/alarmTimePicker"
-        android:onClick="onToggleClicked"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="360dp" />
-
-</RelativeLayout >
+</LinearLayout>

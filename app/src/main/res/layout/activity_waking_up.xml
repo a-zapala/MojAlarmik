@@ -4,6 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".WakingUpActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2.0">
+
+        <AnalogClock
+            android:id="@+id/simpleAnalogClock"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content" />
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:id="@+id/button"
+            android:text="@string/turn_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHighlight="@color/colorPrimary"
+            android:background = "@drawable/purple_btn"
+            android:onClick="turnOffAlarm" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
